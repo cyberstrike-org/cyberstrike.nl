@@ -2,3 +2,4 @@ User-agent: *
 Sitemap: https://cyberstrike.nl/sitemap.xml
 Disallow: /admin/
 Disallow: /.well-known/
+Disallow: /documents/
