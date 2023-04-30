@@ -7,47 +7,67 @@ interface Props {
 }
 
 const {
-	title = 'CyberStrike: Advanced cyber R&D',
-	description = 'The homepage of CyberStrike',
+	title = 'CyberStrike: Advanced cybersecurity research',
+	description = 'Trust CyberStrike for comprehensive vulnerability research and' + 
+					'capability development services. Our team specializes' + 
+					'in embedded vulnerability research, application security,' + 
+					'and website security.  Contact us today to safeguard your digital assets.',
 } = Astro.props;
 ---
 
-<meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
-<title>{title}</title>
+<!--
+ ______________________________________
+/ hello, i'm gatekeeping vulnerability \
+\ research                             /
+ --------------------------------------
+      \                    / \  //\
+       \    |\___/|      /   \//  \\
+            /0  0  \__  /    //  | \ \    
+           /     /  \/_/    //   |  \  \  
+           @_^_@'/   \/_   //    |   \   \ 
+           //_^_/     \/_ //     |    \    \
+        ( //) |        \///      |     \     \
+      ( / /) _|_ /   )  //       |      \     _\
+    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+  (( / / )) ,-{        _      `-.|.-~-.           .~         `.
+ (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+ (( /// ))      `.   {            }                   /      \  \
+  (( / ))     .----~-.\        \-'                 .~         \  `. \^-.
+             ///.----..>        \             _ -~             `.  ^-`  ^-_
+               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
+                                                                  /.-~
+ -->
 
+<!-- SEO titles -->
+<title>{title}</title>
+<meta property='og:title'  content={title}>
+<meta name='twitter:title' content={title}>
+
+<!-- SEO descriptions -->
+<meta name='description'         content={description}>
+<meta property='og:description'  content={description}>
+<meta name='twitter:description' content={description}>
+
+<!-- SEO embed image -->
+<meta property="og:image"  content="/assets/cs_logo.webp">
+<meta name="twitter:image" content="/assets/cs_logo.webp">
+
+<!-- SEO viewport -->
+<meta name="viewport" content="width=device-width" />
+
+<meta charset="UTF-8" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-	rel="stylesheet"
-/>
+
+<!-- may use if fonts break
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-TqlcOveSO7OdRwhylDc3XXvD65/CeTk63ucrHmFJq3cBLr8Wj/5i5a5n/ltfjg+" crossorigin="anonymous">
+-->
+
+<!-- DO NOT USE ====== NOT COMPLIANT WITH GDPR 
+<link rel="preconnect" href="https://fonts.googleapis.com" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"  referrerpolicy="no-referrer" />
+-->
 
 <script is:inline>
 	document.documentElement.classList.add('theme-dark');
-	// This code is inlined in the head to make dark mode instant & blocking.
-	/*const getThemePreference = () => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme');
-		}
-		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	};
-
-	//const isDark = getThemePreference() === 'dark';
-	const isDark = true;
-	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
-
-	if (typeof localStorage !== 'undefined') {
-		// Watch the document element and persist user preference when it changes.
-		const observer = new MutationObserver(() => {
-			//console.log(`observer: ${localStorage.getItem('theme')}`);
-			//const isDark = document.documentElement.classList.contains('theme-dark') || localStorage.getItem('theme') == null || localStorage.getItem('theme') == "dark";
-			const isDark = document.documentElement.classList.contains('theme-dark')
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
-		});
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-	}*/
 </script>
