@@ -64,16 +64,17 @@ const {
 <meta charset="UTF-8" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- may use if fonts break
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-TqlcOveSO7OdRwhylDc3XXvD65/CeTk63ucrHmFJq3cBLr8Wj/5i5a5n/ltfjg+" crossorigin="anonymous">
--->
-
-<!-- DO NOT USE ====== NOT COMPLIANT WITH GDPR 
-<link rel="preconnect" href="https://fonts.googleapis.com" referrerpolicy="no-referrer" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"  referrerpolicy="no-referrer" />
--->
-
-<script is:inline>
-	document.documentElement.classList.add('theme-dark');
-</script>
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+object-src 'none';
+base-uri 'self';
+connect-src 'self';
+font-src 'self';
+frame-src 'self';
+img-src 'self';
+manifest-src 'self';
+media-src 'self';
+worker-src 'none';" />
