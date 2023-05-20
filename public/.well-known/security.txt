@@ -1,4 +1,5 @@
 Contact: mailto:info+security@cyberstrike.nl
+Encryption: https://cyberstrike.nl/documents/cs-pgp-key.asc
 Expires: 2024-01-01T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://cyberstrike.nl/.well-known/security.txt
