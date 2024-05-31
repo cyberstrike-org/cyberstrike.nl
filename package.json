@@ -1,0 +1,16 @@
+{
+  "name": "cyberstrike-nl",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview --host",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^1.2.2",
+    "astro": "^2.3.2"
+  }
+}

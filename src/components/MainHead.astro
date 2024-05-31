@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const {
+	title = 'CyberStrike: Advanced cybersecurity research',
+	description = 'Trust CyberStrike for comprehensive vulnerability research and' + 
+					'capability development services. Our team specializes' + 
+					'in embedded vulnerability research, application security,' + 
+					'and website security.  Contact us today to safeguard your digital assets.',
+} = Astro.props;
+---
+
+<!--
+ ______________________________________
+/ hello, i'm gatekeeping vulnerability \
+\ research                             /
+ --------------------------------------
+      \                   / \  //\
+       \    |\___/|      /   \//  \\
+            /0  0  \__  /    //  | \ \    
+           /     /  \/_/    //   |  \  \  
+           @_^_@'/   \/_   //    |   \   \ 
+           //_^_/     \/_ //     |    \    \
+        ( //) |        \///      |     \     \
+      ( / /) _|_ /   )  //       |      \     _\
+    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+  (( / / )) ,-{        _      `-.|.-~-.           .~         `.
+ (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+ (( /// ))      `.   {            }                   /      \  \
+  (( / ))     .----~-.\        \-'                 .~         \  `. \^-.
+             ///.----..>        \             _ -~             `.  ^-`  ^-_
+               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
+                                                                  /.-~
+ -->
+
+ 
+<!-- Content Security Policy (CSP)
+  - We are accepting the risk of arbitrary style attributes 
+  - Additionally, we are using HSTS instead of upgrade-insecure-requests
+  -->
+<meta
+http-equiv="Content-Security-Policy"
+content="default-src 'self';
+script-src 'nonce-c4ca4238a0b923820dcc509a6f75849b' 'nonce-c81e728d9d4c2f636f067f89cc14862c';
+style-src 'self';
+style-src-attr 'unsafe-inline';
+object-src 'none';
+base-uri 'self';
+connect-src 'none';
+font-src 'none';
+frame-src 'none';
+img-src 'self';
+manifest-src 'none';
+media-src 'none';
+worker-src 'none';
+require-trusted-types-for 'script';" />
+
+<!-- SEO titles -->
+<title>{title}</title>
+<meta property='og:title'  content={title}>
+<meta name='twitter:title' content={title}>
+
+<!-- SEO descriptions -->
+<meta name='description'         content={description}>
+<meta property='og:description'  content={description}>
+<meta name='twitter:description' content={description}>
+
+<!-- SEO embed image -->
+<meta property="og:image"  content="/assets/cs_logo.webp">
+<meta name="twitter:image" content="/assets/cs_logo.webp">
+
+<!-- embed color -->
+<meta name="theme-color" content="#a61111" />
+
+<!-- SEO sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- SEO viewport -->
+<meta name="viewport" content="width=device-width" />
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

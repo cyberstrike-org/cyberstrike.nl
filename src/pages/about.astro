@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout 
+	title="About | CyberStrike" 
+	description="Learn more about CyberStrike - your trusted partner for vulnerability research and capability development. Our expert team specializes in embedded vulnerability research, application security, and website security. Discover how we can help safeguard your digital assets and stay ahead of potential threats."
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for taking a breath to learn more about CyberStrike's team and our background."
+			/>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						CyberStrike was established in October 2022 with the goal of addressing the lack of innovative software 
+						security research in the cybersecurity industry. Our team noticed that many companies in the industry 
+						focused solely on testing corporate infrastructure with existing tools (i.e., pentesting), with little 
+						attention given to cutting-edge innovation and research on the underlying software stack.
+					</p>
+					<br>
+					<p>
+						Our mission is to conduct extensive vulnerability research on the software that powers digital infrastructure. 
+						We are committed to pushing the boundaries of what is possible in software security research and innovation. 
+						We believe that by doing so, we can provide our clients with unparalleled security solutions and help protect 
+						them from potential cyber threats.
+					</p>
+					<br>
+					<p>
+						Furthermore, we believe in contributing our knowledge to the wider industry. We are committed to disclosing our 
+						research findings as much as possible while respecting the privacy and wishes of our partners. By sharing our 
+						findings, we hope to raise awareness of possible vulnerabilities in software and contribute to a more secure 
+						digital landscape.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>
+						Our team has a wealth of experience in conducting embedded vulnerability research, as well as in application and website security. We possess a diverse skill set in IT, ranging from digital infrastructure in Docker to coding fuzzers in Python. Our expertise also extends to the analysis and reverse engineering of embedded firmware using C and Assembly.
+					</p>
+					<br>
+					<p>
+						We believe that our wide-ranging skill set allows us to provide our clients with comprehensive security solutions that take into account the complexities of modern digital infrastructure. Our team is highly skilled and knowledgeable in their respective areas of expertise and are committed to staying up-to-date with the latest trends and developments in the field of cybersecurity.
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
